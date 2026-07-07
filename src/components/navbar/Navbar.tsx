@@ -4,9 +4,10 @@ function Navbar() {
   return (
     <div className='w-full bg-[#1e293b] text-white py-4 px-8 flex justify-between items-center shadow-md'>
       <h2 className='text-xl font-bold tracking-wide'>Farmácia</h2>
-      <div className='flex gap-6 font-medium'>
+      <div className='flex gap-6 font-medium items-center'>
         <Link to="/home" className='hover:text-emerald-400 transition-colors'>Home</Link>
         <Link to="/produtos" className='hover:text-emerald-400 transition-colors'>Produtos</Link>
+        <Link to="/cadastrarproduto" className='hover:text-emerald-400 transition-colors'>Cadastrar Produto</Link>
         <Link to="/categorias" className='hover:text-emerald-400 transition-colors'>Categorias</Link>
         <Link to="/cadastrarcategoria" className='hover:text-emerald-400 transition-colors'>Cadastrar Categoria</Link>
       </div>
