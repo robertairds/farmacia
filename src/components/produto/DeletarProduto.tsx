@@ -33,18 +33,21 @@ function DeletarProduto() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-8 px-4 text-slate-100'>
-      <div className='w-full max-w-md bg-slate-800 p-8 rounded-2xl shadow-xl flex flex-col gap-6 text-center'>
-        <h1 className='text-3xl font-bold text-rose-500'>Deletar Produto</h1>
-        <p className='text-slate-300'>Você tem certeza que deseja apagar este produto?</p>
-        <div className='bg-slate-900 p-4 rounded-xl border border-slate-700 font-bold text-xl'>
+    <div className='flex items-center justify-center bg-[#101a14] min-h-[calc(100vh-8rem)] py-12 px-4 text-[#e2ede6] relative overflow-hidden'>
+      {/* Detalhe de fundo decorativo com clima vintage */}
+      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#4e7c5d_1.5px,transparent_1.5px)] [background-size:20px_20px] pointer-events-none"></div>
+
+      <div className='w-full max-w-md border border-[#365945] bg-gradient-to-br from-[#17271e] to-[#121f18] p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-md flex flex-col gap-6 text-center z-10'>
+        <h1 className='text-3xl font-serif font-bold text-rose-400 tracking-wide'>Deletar Produto</h1>
+        <p className='text-[#c4d6cb] font-sans font-light'>Você tem certeza que deseja apagar este produto?</p>
+        <div className='bg-[#0d1611] border border-[#365945] p-4 rounded-xl font-serif font-bold text-xl text-[#e8f5ec]'>
           {produto.nome}
         </div>
-        <div className='flex gap-4'>
-          <Link to='/produtos' className='w-1/2 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors'>
+        <div className='flex gap-4 pt-2'>
+          <Link to='/produtos' className='w-1/2 py-3 bg-transparent text-[#d5ecdc] hover:bg-[#20382b]/60 border border-[#528f6f] rounded-xl font-serif font-semibold transition-colors'>
             Não
           </Link>
-          <button onClick={apagarProduto} className='w-1/2 py-3 bg-rose-600 hover:bg-rose-700 rounded-lg font-semibold transition-colors'>
+          <button onClick={apagarProduto} className='w-1/2 py-3 bg-rose-700 hover:bg-rose-800 text-white rounded-xl font-serif font-semibold transition-colors shadow-md'>
             Sim
           </button>
         </div>

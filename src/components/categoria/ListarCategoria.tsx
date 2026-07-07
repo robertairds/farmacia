@@ -19,12 +19,16 @@ function ListarCategorias() {
   }, [categorias.length])
 
   return (
-    <div className='container mx-auto py-8 px-4 text-slate-100 min-h-[calc(100vh-8rem)]'>
-      <h1 className='text-3xl font-bold text-center mb-8 text-emerald-400'>Lista de Categorias</h1>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-        {categorias.map((cat) => (
-          <CardCategoria key={cat.id} categoria={cat} />
-        ))}
+    <div className='bg-[#101a14] min-h-[calc(100vh-8rem)] py-12 px-6 md:px-14 text-[#e2ede6]'>
+      <div className='max-w-7xl mx-auto'>
+        <h1 className='text-3xl md:text-4xl font-serif font-bold text-center mb-10 text-[#c2dec9] tracking-wide'>
+          Lista de Categorias
+        </h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {categorias.map((cat) => (
+            <CardCategoria key={cat.id} categoria={cat} />
+          ))}
+        </div>
       </div>
     </div>
   )

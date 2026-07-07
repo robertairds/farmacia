@@ -47,37 +47,39 @@ function FormCategoria() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-8 px-4 text-slate-100'>
-      <form onSubmit={gerarNovaCategoria} className='flex flex-col w-full max-w-md bg-slate-800 p-8 rounded-2xl shadow-xl gap-4'>
-        <h1 className='text-3xl font-bold text-center mb-4 text-emerald-400'>
+    <div className='flex items-center justify-center bg-[#101a14] min-h-[calc(100vh-8rem)] py-12 px-4 text-[#e2ede6] relative overflow-hidden'>
+      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#4e7c5d_1.5px,transparent_1.5px)] [background-size:20px_20px] pointer-events-none"></div>
+
+      <form onSubmit={gerarNovaCategoria} className='flex flex-col w-full max-w-lg border border-[#365945] bg-gradient-to-br from-[#17271e] to-[#121f18] p-8 md:p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-md gap-5 z-10'>
+        <h1 className='text-3xl font-serif font-bold text-center mb-2 text-[#c2dec9] tracking-wide'>
           {id !== undefined ? 'Editar Categoria' : 'Cadastrar Categoria'}
         </h1>
         
         <div className='flex flex-col gap-2'>
-          <label className='font-semibold'>Nome da Categoria</label>
+          <label className='font-serif text-sm text-[#b8ccc0] tracking-wide'>Nome da Categoria</label>
           <input
             type='text'
             name='nome'
             value={categoria.nome}
             onChange={(e) => atualizarEstado(e)}
             placeholder='Ex: Medicamentos'
-            className='bg-slate-900 border border-slate-700 p-3 rounded-lg text-white focus:outline-none focus:border-emerald-500'
+            className='bg-[#0d1611] border border-[#365945] p-3.5 rounded-xl text-white focus:outline-none focus:border-[#528f6f] placeholder-[#5a7364]'
           />
         </div>
 
         <div className='flex flex-col gap-2'>
-          <label className='font-semibold'>Descrição da Categoria</label>
+          <label className='font-serif text-sm text-[#b8ccc0] tracking-wide'>Descrição da Categoria</label>
           <input
             type='text'
             name='descricao'
             value={categoria.descricao}
             onChange={(e) => atualizarEstado(e)}
             placeholder='Ex: Analgésicos e antitérmicos'
-            className='bg-slate-900 border border-slate-700 p-3 rounded-lg text-white focus:outline-none focus:border-emerald-500'
+            className='bg-[#0d1611] border border-[#365945] p-3.5 rounded-xl text-white focus:outline-none focus:border-[#528f6f] placeholder-[#5a7364]'
           />
         </div>
 
-        <button type='submit' className='bg-emerald-600 hover:bg-emerald-700 py-3 rounded-lg font-bold transition-colors mt-2'>
+        <button type='submit' className='bg-[#2c4e3b] text-[#e2ede6] hover:bg-[#38634c] border border-[#528f6f] py-3.5 rounded-xl font-serif font-bold tracking-wide transition-colors mt-3 shadow-md'>
           Salvar
         </button>
       </form>

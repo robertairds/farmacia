@@ -75,45 +75,47 @@ function FormProduto() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] py-8 px-4 text-slate-100'>
-      <form onSubmit={gerarNovoProduto} className='flex flex-col w-full max-w-md bg-slate-800 p-8 rounded-2xl shadow-xl gap-4'>
-        <h1 className='text-3xl font-bold text-center mb-4 text-emerald-400'>
+    <div className='flex items-center justify-center bg-[#101a14] min-h-[calc(100vh-8rem)] py-12 px-4 text-[#e2ede6] relative overflow-hidden'>
+      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#4e7c5d_1.5px,transparent_1.5px)] [background-size:20px_20px] pointer-events-none"></div>
+
+      <form onSubmit={gerarNovoProduto} className='flex flex-col w-full max-w-lg border border-[#365945] bg-gradient-to-br from-[#17271e] to-[#121f18] p-8 md:p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-md gap-4 z-10'>
+        <h1 className='text-3xl font-serif font-bold text-center mb-2 text-[#c2dec9] tracking-wide'>
           {id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}
         </h1>
         
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Nome</label>
-          <input type='text' name='nome' value={produto.nome} onChange={atualizarEstado} placeholder='Nome do produto' className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white' />
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Nome</label>
+          <input type='text' name='nome' value={produto.nome} onChange={atualizarEstado} placeholder='Nome do produto' className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]' />
         </div>
 
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Descrição</label>
-          <input type='text' name='descricao' value={produto.descricao} onChange={atualizarEstado} placeholder='Descrição' className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white' />
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Descrição</label>
+          <input type='text' name='descricao' value={produto.descricao} onChange={atualizarEstado} placeholder='Descrição' className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]' />
         </div>
 
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Quantidade</label>
-          <input type='number' name='quantidade' value={produto.quantidade} onChange={atualizarEstado} className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white' />
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Quantidade</label>
+          <input type='number' name='quantidade' value={produto.quantidade} onChange={atualizarEstado} className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]' />
         </div>
 
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Laboratório</label>
-          <input type='text' name='laboratorio' value={produto.laboratorio} onChange={atualizarEstado} className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white' />
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Laboratório</label>
+          <input type='text' name='laboratorio' value={produto.laboratorio} onChange={atualizarEstado} className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]' />
         </div>
 
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Preço</label>
-          <input type='number' step='0.01' name='preco' value={produto.preco} onChange={atualizarEstado} className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white' />
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Preço</label>
+          <input type='number' step='0.01' name='preco' value={produto.preco} onChange={atualizarEstado} className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]' />
         </div>
 
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Link da Foto</label>
-          <input type='text' name='foto' value={produto.foto} onChange={atualizarEstado} placeholder='https://...' className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white' />
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Link da Foto</label>
+          <input type='text' name='foto' value={produto.foto} onChange={atualizarEstado} placeholder='https://...' className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]' />
         </div>
 
-        <div className='flex flex-col gap-1'>
-          <label className='font-semibold text-sm'>Categoria</label>
-          <select name='categoriaId' onChange={handleCategoriaChange} className='bg-slate-900 border border-slate-700 p-2.5 rounded-lg text-white'>
+        <div className='flex flex-col gap-1.5'>
+          <label className='font-serif text-sm text-[#b8ccc0]'>Categoria</label>
+          <select name='categoriaId' onChange={handleCategoriaChange} className='bg-[#0d1611] border border-[#365945] p-3 rounded-xl text-white focus:outline-none focus:border-[#528f6f]'>
             <option value=''>Selecione uma categoria</option>
             {categorias.map(c => (
               <option key={c.id} value={c.id}>{c.nome}</option>
@@ -121,7 +123,7 @@ function FormProduto() {
           </select>
         </div>
 
-        <button type='submit' className='bg-emerald-600 hover:bg-emerald-700 py-3 rounded-lg font-bold transition-colors mt-2'>
+        <button type='submit' className='bg-[#2c4e3b] text-[#e2ede6] hover:bg-[#38634c] border border-[#528f6f] py-3.5 rounded-xl font-serif font-bold tracking-wide transition-colors mt-2 shadow-md'>
           Salvar
         </button>
       </form>

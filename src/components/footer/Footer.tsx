@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div className='w-full bg-[#1e293b] text-slate-400 py-4 text-center text-sm border-t border-slate-800'>
-      <p>Farmácia — Todos os direitos reservados © 2026</p>
+    <div className='w-full bg-[#0d1611] text-[#9cb5a6] py-6 text-center text-xs font-serif border-t border-[#22382c] tracking-widest shadow-inner'>
+      <p>The Green Apothecary — Tradição e Confiança © 2026</p>
     </div>
   )
 }
