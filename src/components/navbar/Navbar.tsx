@@ -7,6 +7,8 @@ function Navbar() {
       <div className='flex gap-6 font-medium'>
         <Link to="/home" className='hover:text-emerald-400 transition-colors'>Home</Link>
         <Link to="/produtos" className='hover:text-emerald-400 transition-colors'>Produtos</Link>
+        <Link to="/categorias" className='hover:text-emerald-400 transition-colors'>Categorias</Link>
+        <Link to="/cadastrarcategoria" className='hover:text-emerald-400 transition-colors'>Cadastrar Categoria</Link>
       </div>
     </div>
   )
